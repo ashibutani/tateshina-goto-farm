@@ -1,0 +1,393 @@
+@charset "utf-8";
+
+/* 全てに適用 */
+img {
+    width: 100%;
+}
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 700;
+}
+
+/********* ファーストビュー *********/
+.fvWrapper {
+    background-image: url(../images/fv.jpg);
+    background-position: 50%;
+    height: 66.72vw;
+    max-height: 854px;
+    background-size: cover;
+    position: relative;
+
+}
+
+.fv_text {
+    position: absolute;
+    top: 13%;
+    right: 11.4%;
+
+    height: clamp(200px, 30vw, 432px);
+}
+
+h1 {
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+    font-size: clamp(17px, 2.5vw, 32px);
+    line-height: 150%;
+    color: #4E301B;
+    letter-spacing: 0.2em;
+}
+
+.h1span {
+    background-color: #ffffff;
+    width: 4.84vw;
+
+    margin-left: 21px;
+    display: inline-flex;
+    align-items: center;
+    padding-top: 11px;
+}
+
+
+/* メニューバー */
+
+.nav_menu {
+    background: #FDF9EF;
+    position: relative;
+    color: #4E301B;
+
+}
+
+.pc_nav {
+    display: flex;
+    //width: 79.2%;
+    //max-width: 1014px;
+    width: 1014px;
+    font-size: 16px;
+    line-height: 23px;
+    text-align: center;
+
+    background-color: aqua;
+    margin: 0 auto;
+    justify-content: space-between;
+
+}
+
+.pc_nav li {
+    margin-right: 39px;
+}
+
+.nav_left {
+    display: flex;
+    padding-top: 6.9vw;
+}
+
+.nav_right {
+    display: flex;
+    padding-top: 6.9vw;
+}
+
+/* ロゴ部分 */
+.logoBox {
+    position: absolute;
+    width: fit-content;
+    margin: 0 auto;
+    z-index: 100;
+    top: -48px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.logo_1 {
+    // width: clamp(50px, 7.5vw, 96px);
+    width: 96px;
+    margin: 0 auto;
+}
+
+.logo_1::after {
+    left: 50%;
+    top: -30px;
+    transform: translateX(-50%);
+    content: '';
+    display: inline-block;
+    //width: clamp(80px, 12.03vw, 154px);
+    //height: clamp(80px, 12.03vw, 154px);
+    width: 154px;
+    height: 154px;
+    background: #FDF9EC;
+    border-radius: 50%;
+    z-index: -100;
+    position: absolute;
+}
+
+.logo_2 {
+    //width: clamp(140px, 21.48vw, 275px);
+    width: 275px;
+}
+
+
+/* スマホ */
+/* ハンバーガー */
+.sp_nav {
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    opacity: 0.9;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 500;
+}
+
+.sp_logo {}
+
+.splogo_1 {
+    width: 55px;
+    margin: 61px auto 10px auto;
+}
+
+.splogo_2 {
+    width: 280px;
+    margin: 0 auto;
+}
+
+.sp_nav ul {
+    display: block;
+    margin-top: 32px;
+}
+
+.sp_nav li {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 16px;
+    line height: 23px;
+    font-size: 16px;
+    font-weight: 700;
+
+
+}
+
+.hm_menu {
+    display: none;
+}
+
+/********* アバウト *********/
+
+/********* プロダクト *********/
+
+/********* ニュース *********/
+
+/********* FAQ *********/
+
+/********* マップ *********/
+
+
+
+
+/******メディアクエリ******************/
+/************************************************/
+@media (max-width: 1850px) {}
+
+@media (max-width: 1014px) {
+    .pc_nav {
+        width: 100%;
+    }
+
+    .pc_nav li {
+        font-size: 14px;
+    }
+
+    .logoBox {
+        position: absolute;
+        top: -33px;
+    }
+
+    .nav_left {
+        padding-top: 7vw;
+    }
+
+    .nav_right {
+        padding-top: 7vw;
+    }
+
+    .logo_1 {
+        width: 67px;
+    }
+
+    .logo_1::after {
+        position: absolute;
+        width: 108px;
+        height: 108px;
+        top: -21px;
+    }
+
+    .logo_2 {
+        width: 192px;
+    }
+}
+
+@media (max-width: 834px) {
+    .fv_text {
+        height: 281px;
+        height: clamp(200px, 30vw, 432px);
+    }
+
+    .h1 {
+        font-size: 25px;
+        letter-spacing: 0.1em;
+    }
+
+    .h1span {
+        width: 4.84vw;
+    }
+
+    .pc_nav {
+        justify-content: center;
+    }
+
+    .nav_left {
+        padding-top: 94px;
+    }
+
+    .nav_right {
+        padding-top: 94px;
+
+    }
+
+}
+
+@media (max-width: 744px) {
+    .fv_text {
+        position: absolute;
+        right: 16%;
+    }
+
+    .h1span {
+        width: 27px;
+        margin-left: 14px;
+    }
+
+    .pc_nav {
+        display: none;
+    }
+
+    /******ハンバーガーメニュー*************/
+    .hm_menu {
+        display: inline;
+        display: block;
+        position: fixed;
+        z-index: 1000;
+        position: absolute;
+        width: 48px;
+        height: 48px;
+        top: 0;
+        right: 0;
+        background: #FED966;
+        box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+        border-radius: 50%;
+        margin: 20px;
+    }
+
+    .hm_menu span {
+        width: 18px;
+        border: 1px solid #4E301B;
+        position: absolute;
+        top: 18px;
+        right: 15px;
+        transition: 0.3s;
+
+    }
+
+    /*三本線クリック前  */
+
+    .hm_menu span:nth-child(2) {
+        top: 23px;
+    }
+
+    .hm_menu span:nth-child(3) {
+        top: 28px;
+    }
+
+    /*三本線クリック後*/
+    .active:nth-child(1) {
+        border-color: #4E301B;
+        /*li22+*/
+        /* background-color: #000000; */
+        /*li22+*/
+        top: 18px;
+        right: 15px;
+        width: 18px;
+        transform: rotate(-45deg);
+        transform-origin: 90% 100%;
+    }
+
+    .active:nth-child(2) {
+        opacity: 0;
+    }
+
+    .active:nth-child(3) {
+        border-color: #4E301B;
+        /*li22+*/
+        /* background-color: #000000; */
+        /*li22+*/
+        width: 18px;
+        top: 28px !important;
+        /*←.hm_menu .active～にするか、importantつけないと効かない。 */
+        right: 15px;
+        transform: rotate(45deg);
+        transform-origin: 80% 0;
+    }
+
+    /* ハンバーガーここまで */
+
+    .logo_1 {
+        width: 48px;
+    }
+
+    .logo_1::after {
+        position: absolute;
+        width: 78.5px;
+        height: 78.5px;
+        top: -15px;
+    }
+
+    .logo_2 {
+        width: 137px;
+    }
+}
+
+/*スマホ */
+@media (max-width: 428px) {
+    .fvWrapper {
+        height: 667px;
+        background-size: 998px;
+    }
+
+    .fv_text {
+        width: 229px;
+    }
+
+    h1 {
+
+        -webkit-writing-mode: horizontal-tb;
+        -ms-writing-mode: horizontal-tb;
+        font-size: 24px;
+        line-height: 150%;
+        color: #4E301B;
+        letter-spacing: 0;
+    }
+
+    .h1span {
+        background-color: #ffffff;
+        //width: 229px;
+        display: initial;
+        align-items: center;
+        padding: 7px;
+        margin: 0;
+        margin-bottom: 6px;
+        text-align: left;
+    }
+}
+
+@media (max-width: 375px) {}
