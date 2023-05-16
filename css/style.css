@@ -21,7 +21,7 @@ body {
 
 }
 
-.fv_text {
+.pc_fv_text {
     position: absolute;
     top: 13%;
     right: 11.4%;
@@ -29,7 +29,11 @@ body {
     height: clamp(200px, 30vw, 432px);
 }
 
-h1 {
+.sp_fv_text {
+    display: none;
+}
+
+.pc_fv_text h1 {
     -ms-writing-mode: tb-rl;
     writing-mode: vertical-rl;
     font-size: clamp(17px, 2.5vw, 32px);
@@ -38,10 +42,9 @@ h1 {
     letter-spacing: 0.2em;
 }
 
-.h1span {
+.pc_span {
     background-color: #ffffff;
     width: 4.84vw;
-
     margin-left: 21px;
     display: inline-flex;
     align-items: center;
@@ -228,18 +231,19 @@ h1 {
 }
 
 @media (max-width: 834px) {
-    .fv_text {
+    .pc_fv_text {
         height: 281px;
-        height: clamp(200px, 30vw, 432px);
+
     }
 
-    .h1 {
-        font-size: 25px;
+    .pc_fv_text h1 {
+        font-size: 20px;
         letter-spacing: 0.1em;
     }
 
-    .h1span {
-        width: 4.84vw;
+    .pc_span {
+        width: 29px;
+        padding-top: 6px;
     }
 
     .pc_nav {
@@ -257,13 +261,28 @@ h1 {
 
 }
 
-@media (max-width: 744px) {
-    .fv_text {
-        position: absolute;
-        right: 16%;
+@media (max-width: 630px) {
+    .pc_fv_text {
+        height: 200px;
     }
 
-    .h1span {
+    .pc_fv_text h1 {
+        font-size: 17px;
+    }
+
+}
+
+
+@media (max-width: 744px) {
+    .pc_fv_text {
+        position: absolute;
+        right: 16%;
+
+    }
+
+
+
+    .pc_span {
         width: 27px;
         margin-left: 14px;
     }
@@ -271,6 +290,7 @@ h1 {
     .pc_nav {
         display: none;
     }
+
 
     /******ハンバーガーメニュー*************/
     .hm_menu {
@@ -364,30 +384,56 @@ h1 {
         background-size: 998px;
     }
 
-    .fv_text {
-        width: 229px;
+    .pc_fv_text {
+        display: none;
     }
 
-    h1 {
-
-        -webkit-writing-mode: horizontal-tb;
-        -ms-writing-mode: horizontal-tb;
+    .sp_fv_text {
+        display: inline-block;
+        font-weight: 700;
         font-size: 24px;
-        line-height: 150%;
+
         color: #4E301B;
-        letter-spacing: 0;
+        width: 229px;
+        margin-left: 33px;
+        margin-top: 423px;
     }
 
-    .h1span {
+    .sp_span {
+        display: inline-block;
         background-color: #ffffff;
-        //width: 229px;
-        display: initial;
-        align-items: center;
-        padding: 7px;
-        margin: 0;
         margin-bottom: 6px;
-        text-align: left;
+        height: 38px;
+        line-height: 38px;
+        padding-left: 7px;
     }
+
+    /*  */
+    .logo_1 {
+
+        width: 96px;
+        margin: 0 auto;
+    }
+
+    .logo_1::after {
+        left: 50%;
+        top: -30px;
+        transform: translateX(-50%);
+        content: '';
+        display: inline-block;
+        width: 154px;
+        height: 154px;
+        background: #FDF9EC;
+        border-radius: 50%;
+        z-index: -100;
+        position: absolute;
+    }
+
+    .logo_2 {
+        width: 275px;
+    }
+
+
 }
 
 @media (max-width: 375px) {}
