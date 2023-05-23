@@ -8,7 +8,7 @@
     <meta name=”description” content=”descriotion→「蓼科ごとう農園」は、蓼科の新鮮な農産物を提供するだけでなく、蓼科の自然環境を大切に守り、後世に残すことを使命としています。” />
     <meta name=“robots” content=“noindex”>
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
+
     <link rel="icon" href="/favicon.ico" id="favicon">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,11 +17,19 @@
         rel="stylesheet">
     <link href="https://use.fontawesome.com/releases/v6.2.1/css/all.css" rel="stylesheet">
 
+
+
+
+
     <script src="https://code.jquery.com/jquery-3.6.2.min.js">
     </script>
-    <script src="js/script.js">
-    </script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+
+
+
     <title>蓼科ごとう農園</title>
+
 </head>
 
 <body>
@@ -54,45 +62,43 @@
         <div class="nav_menu">
             <nav class="pc_nav">
                 <ul class="nav_left">
-                    <li>この農園について
+                    <li><a href="#about">この農園について</a>
                     </li>
-                    <li>製品一覧
+                    <li><a href="#product">製品一覧</a>
                     </li>
-                    <li>お知らせ
+                    <li><a href="#news">お知らせ</a>
                     </li>
                 </ul>
                 <ul class="nav_right">
-                    <li>FAQ
+                    <li><a href="#faq">FAQ</a>
                     </li>
-                    <li>アクセス
+                    <li><a href="#access">アクセス</a>
                     </li>
-                    <li>お問合わせ
+                    <li><a href="#contact">お問い合わせ</a>
                     </li>
                 </ul>
             </nav>
             <nav class="sp_nav">
-                <!-- <div class="sp_logo">
+                <div class="sp_logo">
                     <div class="splogo_1">
                         <img src="images/logo-01.svg">
                     </div>
                     <div class="splogo_2">
                         <img src="images/logo-02.svg">
                     </div>
-
-
-                </div> -->
+                </div>
                 <ul>
-                    <li><a href="">この農園について</a>
+                    <li><a href="#about">この農園について</a>
                     </li>
-                    <li><a href="">製品一覧</a>
+                    <li><a href="#product">製品一覧</a>
                     </li>
-                    <li><a href="">お知らせ</a>
+                    <li><a href="#news">お知らせ</a>
                     </li>
-                    <li><a href="">FAQ</a>
+                    <li><a href="#faq">FAQ</a>
                     </li>
-                    <li><a href="">アクセス</a>
+                    <li><a href="#access">アクセス</a>
                     </li>
-                    <li><a href="">お問い合わせ</a>
+                    <li><a href="#contact">お問い合わせ</a>
                     </li>
                 </ul>
             </nav>
@@ -104,6 +110,119 @@
                     <img src="images/logo-02.svg">
                 </div>
             </div>
+        </div>
+        <div class="aboutWrapper" id="about">
+            <di class="about_inner">
+                <div class="about_pic1">
+                    <img src="images/about-01.png">
+                </div>
+                <div class="about_pic2">
+                    <img src="images/about-02.png">
+                </div>
+
+                <div class="about_title">
+                    蓼科の生きた豊かな恵みを、そのままに
+                </div>
+                <div class="about_body">
+                    <span class="span1">
+                        「蓼科ごとう農園」は、蓼科の新鮮な農産物を提供するだけでなく、
+                        蓼科の自然環境を大切に守り、後世に残すことを使命としています。</span>
+                    <span class="span1">
+                        <span class="span2"> 私たちは、農業に従事する者として、</span>
+
+                        <span class="span2">土地や水、空気といった自然環境がもたらす恩恵に感謝し、</span>
+                        <span class="span2">その恩恵を受け継ぐ未来の世代にも、</span>
+
+                        <span class="span2">同じような恩恵を受け継ぐことができるよう、</span>
+
+
+                        最善を尽くしています。</span>
+                    <span class="span1">
+                        <span class="span2">そのため、私たちは有機農法を導入し、</span>
+
+
+                        化学肥料や農薬を極力使用しない栽培方法を取り入れています。</span>
+                    <span class="span1">
+                        <span class="span2">また、自然災害に備え、耕作放棄地の再生や山の植林活動など、</span>
+
+
+                        地域の環境保全活動にも積極的に参加しています。</span>
+                    <span class="span1">
+                        <span class="span2">私たちは、「蓼科ごとう農園」を通じて、</span>
+
+                        <span class="span2">蓼科の美しい自然を末永く守り、</span>
+
+
+                        地域の豊かな暮らしを支えることを目指しています。</span>
+
+                </div>
+
+        </div>
+
+        <div class="productWrapper" id="product">
+            <h2>製品一覧</h2>
+            <!-- スライダーのコンテナ -->
+            <div class="swiper">
+                <!-- 必要に応じたwrapper -->
+                <div class="swiper-wrapper">
+                    <!-- スライド -->
+                    <div class="swiper-slide">
+                        <div class="item_pic">
+                            <img src="images/grapes.png">
+                        </div>
+                        <div class="item_text">
+                            蓼科ごとう農園オリジナル品種の「シャインマスカット」と「ナガノパープル」500g
+                        </div>
+                        <div class="item_price">
+                            ￥ 7,700（税込）
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="item_pic">
+                            <img src="images/brussels-sprouts.png">
+                        </div>
+                        <div class="item_text">
+                            標高1,000mオーバーの蓼科高原だからこその、あまあま芽キャベツ!! 1kg
+                        </div>
+                        <div class="item_price">
+                            ￥ 4,200（税込）</div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="item_pic">
+                            <img src="images/strawberries.png">
+                        </div>
+                        <div class="item_text">
+                            「あいまりん」「サマープリンセス」「サマーリリカル」「よつぼし」など詰め合わせ10パック
+                        </div>
+                        <div class="item_price">
+                            ￥ 4,800（税込）</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+
+        <div class="newsWrapper" id="news">
+            <h2>お知らせ</h2>
+            
+
+        </div>
+        <div class="faqWrapper" id="faq">
+            <h2>FAQ</h2>
+
+        </div>
+        <div class="accessWrapper" id="access">
+            <h2>アクセス</h2>
+
+        </div>
+        <div class="contactWrapper" id="contact">
+            <h2>お問い合わせ</h2>
+
+        </div>
 
         </div>
 
@@ -114,6 +233,10 @@
     <footer>
 
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="js/script.js">
+    </script>
 
 </body>
 
