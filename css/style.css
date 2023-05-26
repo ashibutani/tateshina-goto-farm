@@ -301,9 +301,151 @@ h2 {
 
 }
 
-/********* ニュース *********/
+/********* お知らせ　*********/
+.newsWrapper {
+    padding-top: 91px;
+    padding-bottom: 91px;
+    position: relative;
+}
+
+table {
+    width: 73vw;
+    max-width: 934px;
+    height: 15.8vw;
+    max-height: 203px;
+    border-top: 1px solid #C6C6C6;
+    margin: 7vw auto 0 auto;
+}
+
+tr {
+    border-bottom: 1px solid #C6C6C6;
+}
+
+th {
+    font-style: normal;
+    font-weight: 400;
+    font-size: clamp(12px, 1.02vw, 13px);
+    color: #403F3F;
+    vertical-align: middle;
+    width: 20%;
+}
+
+td {
+    font-size: clamp(12px, 1.25vw, 18px);
+    font-weight: 400;
+    color: #4E301B;
+    vertical-align: middle;
+}
+
+.grape_pic {
+    width: 235px;
+    position: absolute;
+    right: 0;
+    bottom: -78.5px;
+    z-index: 100;
+}
+
 
 /********* FAQ *********/
+.faqWrapper {
+    padding-top: 7vw;
+    padding-bottom: 7vw;
+    background: #FDF9EF;
+    position: relative;
+}
+
+/*アコーディオン全体*/
+.accordion-area {
+    list-style: none;
+    width: 740px;
+    margin: 0 auto;
+}
+
+.accordion-area li {
+    margin: 10px 0;
+}
+
+
+
+/*アコーディオンタイトル*/
+.title {
+    position: relative;
+    /*+マークの位置基準とするためrelative指定*/
+
+    font-size: 1rem;
+    font-weight: normal;
+
+    transition: all .5s ease;
+    background: #ffffff;
+    height: 50px;
+
+    margin-top: 31px;
+    font-family: 'Noto Sans JP';
+    font-size: 18px;
+    color: #4E301B;
+    display: flex;
+    align-items: center;
+
+}
+
+.title br {
+    display: none;
+}
+
+.Q_p {
+    margin-left: 14px;
+    margin-right: 8px;
+    font-family: 'Roboto';
+    font-size: 24px;
+}
+
+/*アイコンの矢印*/
+.title::before,
+.title::after {
+    position: absolute;
+    content: '';
+    right: 14px;
+    top: 20px;
+
+}
+
+.title::after {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 0 10px;
+    border-bottom: 3px solid #c6c6c6;
+    border-right: 3px solid #c6c6c6;
+    transform: rotate(45deg);
+
+}
+
+/*　closeというクラスがついたら形状変化　*/
+
+.title.close::after {
+    transform: rotate(-135deg);
+}
+
+/*アコーディオンで現れるエリア*/
+.box {
+    display: none;
+    /*はじめは非表示*/
+    margin-top: 24px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: #4E301B;
+}
+
+/**** アコーディオンここまで ****/
+
+.breackfast_pic {
+    width: 349px;
+    position: absolute;
+    left: 0;
+    bottom: -133px;
+    z-index: 100;
+}
 
 /********* マップ *********/
 
@@ -357,6 +499,20 @@ h2 {
     .span2 {
         display: inline;
     }
+
+    /* お知らせ */
+
+    .grape_pic {
+        width: 200px;
+        position: absolute;
+
+        bottom: -66px;
+    }
+
+    .breackfast_pic {
+        width: 300px;
+        bottom: -114px;
+    }
 }
 
 @media (max-width: 834px) {
@@ -402,6 +558,23 @@ h2 {
         top: 180px; */
         width: 350px;
 
+    }
+
+    /* お知らせ */
+    table {
+        height: 170px;
+    }
+
+    .grape_pic {
+        width: 180px;
+        position: absolute;
+
+        bottom: -60px;
+    }
+
+    .breackfast_pic {
+        width: 280px;
+        bottom: -107px;
     }
 }
 
@@ -524,46 +697,90 @@ h2 {
         top: 340px;
     }
 
-}
+    /* お知らせ */
 
-@media (max-width: 630px) {
-    .pc_fv_text {
-        height: 200px;
-    }
-
-    .pc_fv_text h1 {
-        font-size: 17px;
-    }
-
-    /* アバウト */
-    .about_pic1 {
-        width: 375px;
-    }
-
-    .about_pic2 {
-        width: 170px;
-        margin-top: 450px;
-    }
-
-    .about_title {
-
+    .grape_pic {
+        width: 120px;
         position: absolute;
-        top: 275px;
-        width: 362px;
-        left: 7%;
+
+        bottom: -40px;
     }
 
-    .about_body {
-        position: absolute;
-        top: 340px;
-        left: 7%;
+    .breackfast_pic {
+        width: 200px;
+        bottom: -77px;
     }
 
-    /* 製品一覧 */
-    .swiper-wrapper {
-        margin-top: 51px;
-        margin-bottom: 54px;
+    /* FAQ */
 
+    .accordion-area {
+        width: 500px;
+
+    }
+
+    @media (max-width: 630px) {
+        .pc_fv_text {
+            height: 200px;
+        }
+
+        .pc_fv_text h1 {
+            font-size: 17px;
+        }
+
+        /* アバウト */
+        .about_pic1 {
+            width: 375px;
+        }
+
+        .about_pic2 {
+            width: 170px;
+            margin-top: 450px;
+        }
+
+        .about_title {
+
+            position: absolute;
+            top: 275px;
+            width: 362px;
+            left: 7%;
+        }
+
+        .about_body {
+            position: absolute;
+            top: 340px;
+            left: 7%;
+        }
+
+        /* 製品一覧 */
+        .swiper-wrapper {
+            margin-top: 51px;
+            margin-bottom: 54px;
+
+        }
+
+        /* お知らせ */
+        table {
+            width: 415px;
+        }
+
+        /* FAQ */
+
+        .accordion-area {
+            width: 350px;
+
+        }
+
+        .title {
+            font-size: 14px;
+        }
+
+        .title br {
+            display: inline;
+        }
+
+        .box {
+            font-size: 13px;
+        }
     }
 
     /*スマホ */
@@ -648,6 +865,19 @@ h2 {
             transform: translateX(-50%);
             width: 300px;
         }
+
+        /*  */
+        table {
+            width: 360px;
+        }
+
+        tr {
+            display: grid;
+            height: 62px;
+            padding-top: 10px;
+        }
+
+
 
 
     }
