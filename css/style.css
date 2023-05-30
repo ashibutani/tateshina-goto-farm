@@ -82,7 +82,7 @@ h2 {
     line-height: 23px;
     text-align: center;
 
-    background-color: aqua;
+
     margin: 0 auto;
     justify-content: space-between;
 
@@ -136,8 +136,18 @@ h2 {
 }
 
 .logo_2 {
+    margin-top: 23px;
+    margin-bottom: 11px;
     //width: clamp(140px, 21.48vw, 275px);
     width: 275px;
+
+}
+
+.logo_2_en {
+
+    width: 142px;
+    margin: 0 auto;
+    line-height: 0;
 }
 
 
@@ -164,6 +174,11 @@ h2 {
 
 .splogo_2 {
     width: 280px;
+    margin: 0 auto;
+}
+
+.splogo_2_en {
+    width: 143px;
     margin: 0 auto;
 }
 
@@ -308,7 +323,7 @@ h2 {
     position: relative;
 }
 
-table {
+.news_table {
     width: 73vw;
     max-width: 934px;
     height: 15.8vw;
@@ -317,11 +332,11 @@ table {
     margin: 7vw auto 0 auto;
 }
 
-tr {
+.news_table tr {
     border-bottom: 1px solid #C6C6C6;
 }
 
-th {
+.news_table th {
     font-style: normal;
     font-weight: 400;
     font-size: clamp(12px, 1.02vw, 13px);
@@ -330,7 +345,7 @@ th {
     width: 20%;
 }
 
-td {
+.news_table td {
     font-size: clamp(12px, 1.25vw, 18px);
     font-weight: 400;
     color: #4E301B;
@@ -348,8 +363,8 @@ td {
 
 /********* FAQ *********/
 .faqWrapper {
-    padding-top: 7vw;
-    padding-bottom: 7vw;
+    padding-top: 91px;
+    padding-bottom: 91px;
     background: #FDF9EF;
     position: relative;
 }
@@ -447,7 +462,137 @@ td {
     z-index: 100;
 }
 
-/********* マップ *********/
+/********* アクセス *********/
+.accessWrapper {
+    position: relative;
+    padding-top: 91px;
+    padding-bottom: 91px;
+}
+
+.access_box {
+    display: flex;
+    justify-content: center;
+    margin-top: 7vw;
+}
+
+.access_table {
+    width: 35.8vw;
+    height: 20.9vw;
+    font-size: clamp(12px, 1.25vw, 18px);
+    color: #4E301B;
+    border-top: 1px solid #C6C6C6;
+
+}
+
+.access_table tr {
+    border-bottom: 1px solid #C6C6C6;
+
+}
+
+.access_table th {
+    vertical-align: middle;
+    width: 13.6vw;
+}
+
+.access_table td {
+    vertical-align: middle;
+}
+
+.map {
+    width: 34.6vw;
+    height: 26.2vw;
+    margin-left: 32px;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.brussels_pic {
+    width: 264px;
+    position: absolute;
+    right: 0;
+    bottom: -75px;
+}
+
+/* お問い合わせ */
+.contactWrapper {
+    padding-top: 91px;
+
+    background: #FDF9EF;
+}
+
+.contactWrapper p {
+
+    font-size: clamp(12px, 1.25vw, 18px);
+    /* identical to box height */
+    text-align: center;
+
+    color: #4E301B;
+}
+
+
+
+/* フッター */
+.footerWrapper {}
+
+.footer_nav {
+    display: flex;
+    // width: 1014px;
+    font-size: 16px;
+    line-height: 23px;
+
+}
+
+.footer_nav ul {
+    display: flex;
+    padding-top: 51px;
+    margin: 0 auto;
+}
+
+.footer_nav li {
+    margin-right: 39px;
+    font-size: 16px;
+    color: #4E301B;
+}
+
+/* ロゴ部分 */
+.footer_logoBox {
+    width: fit-content;
+    margin: 0 auto;
+    padding-top: 25px;
+    z-index: 100;
+
+}
+
+/* 
+.logo_1 {
+    width: 96px;
+    margin: 0 auto;
+}
+
+
+.logo_1::after {
+    left: 50%;
+    top: -30px;
+    transform: translateX(-50%);
+    content: '';
+    display: inline-block;
+    //width: clamp(80px, 12.03vw, 154px);
+    //height: clamp(80px, 12.03vw, 154px);
+    width: 154px;
+    height: 154px;
+    background: #FDF9EC;
+    border-radius: 50%;
+    z-index: -100;
+    position: absolute;
+}
+
+.logo_2 {
+
+    width: 275px;
+} */
 
 
 
@@ -491,6 +636,12 @@ td {
 
     .logo_2 {
         width: 192px;
+        margin-top: 8px;
+        margin-bottom: 4px;
+    }
+
+    .logo_2_en {
+        width: 99px;
     }
 
     /* アバウト */
@@ -512,6 +663,12 @@ td {
     .breackfast_pic {
         width: 300px;
         bottom: -114px;
+    }
+
+    /* アクセス */
+    .brussels_pic {
+        width: 200px;
+        bottom: -56px;
     }
 }
 
@@ -536,11 +693,11 @@ td {
     }
 
     .nav_left {
-        padding-top: 94px;
+        padding-top: 125px;
     }
 
     .nav_right {
-        padding-top: 94px;
+        padding-top: 125px;
 
     }
 
@@ -561,7 +718,7 @@ td {
     }
 
     /* お知らせ */
-    table {
+    .news_table {
         height: 170px;
     }
 
@@ -575,6 +732,13 @@ td {
     .breackfast_pic {
         width: 280px;
         bottom: -107px;
+    }
+
+    /* アクセス */
+    .brussels_pic {
+        width: 180px;
+        bottom: -51px;
+
     }
 }
 
@@ -700,10 +864,9 @@ td {
     /* お知らせ */
 
     .grape_pic {
-        width: 120px;
+        width: 135px;
         position: absolute;
-
-        bottom: -40px;
+        bottom: -45px;
     }
 
     .breackfast_pic {
@@ -718,168 +881,223 @@ td {
 
     }
 
-    @media (max-width: 630px) {
-        .pc_fv_text {
-            height: 200px;
-        }
-
-        .pc_fv_text h1 {
-            font-size: 17px;
-        }
-
-        /* アバウト */
-        .about_pic1 {
-            width: 375px;
-        }
-
-        .about_pic2 {
-            width: 170px;
-            margin-top: 450px;
-        }
-
-        .about_title {
-
-            position: absolute;
-            top: 275px;
-            width: 362px;
-            left: 7%;
-        }
-
-        .about_body {
-            position: absolute;
-            top: 340px;
-            left: 7%;
-        }
-
-        /* 製品一覧 */
-        .swiper-wrapper {
-            margin-top: 51px;
-            margin-bottom: 54px;
-
-        }
-
-        /* お知らせ */
-        table {
-            width: 415px;
-        }
-
-        /* FAQ */
-
-        .accordion-area {
-            width: 350px;
-
-        }
-
-        .title {
-            font-size: 14px;
-        }
-
-        .title br {
-            display: inline;
-        }
-
-        .box {
-            font-size: 13px;
-        }
+    /* アクセス */
+    .access_box {
+        display: block;
     }
 
-    /*スマホ */
-    @media (max-width: 428px) {
-        .fvWrapper {
-            height: 667px;
-            background-size: 998px;
-        }
+    .access_table {
+        margin: 7vw auto;
+        width: 350px;
+        height: 187px;
+    }
 
-        .pc_fv_text {
-            display: none;
-        }
+    .map {
+        margin: 0 auto;
+        width: 300px;
+        height: 250px;
+    }
 
-        .sp_fv_text {
-            display: inline-block;
-            font-weight: 700;
-            font-size: 24px;
-
-            color: #4E301B;
-            width: 229px;
-            margin-left: 33px;
-            margin-top: 423px;
-        }
-
-        .sp_span {
-            display: inline-block;
-            background-color: #ffffff;
-            margin-bottom: 6px;
-            height: 38px;
-            line-height: 38px;
-            padding-left: 7px;
-        }
-
-        /*  */
-        .logo_1 {
-
-            width: 96px;
-            margin: 0 auto;
-        }
-
-        .logo_1::after {
-            left: 50%;
-            top: -30px;
-            transform: translateX(-50%);
-            content: '';
-            display: inline-block;
-            width: 154px;
-            height: 154px;
-            background: #FDF9EC;
-            border-radius: 50%;
-            z-index: -100;
-            position: absolute;
-        }
-
-        .logo_2 {
-            width: 275px;
-        }
-
-        /* アバウト */
-        .about_inner {
-            padding-top: 160px;
-        }
-
-        .about_pic1 {
-            width: 350px;
-            margin: 0 auto;
-        }
-
-        .about_pic2 {
-            margin-top: 520px;
-        }
-
-        .about_title {
-            top: 350px;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-
-        .about_body {
-            top: 394px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 300px;
-        }
-
-        /*  */
-        table {
-            width: 360px;
-        }
-
-        tr {
-            display: grid;
-            height: 62px;
-            padding-top: 10px;
-        }
-
-
-
+    .brussels_pic {
+        width: 140px;
+        bottom: -40px;
 
     }
 
-    @media (max-width: 375px) {}
+    /* footer */
+    .footer_nav {
+        line-height: 28px;
+    }
+
+    .footer_nav ul {
+        display: block;
+        padding-top: 10px;
+        text-align: center;
+
+    }
+
+    .footer_nav li {
+        margin-right: 0;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 630px) {
+    .pc_fv_text {
+        height: 200px;
+    }
+
+    .pc_fv_text h1 {
+        font-size: 17px;
+    }
+
+    /* アバウト */
+    .about_pic1 {
+        width: 375px;
+    }
+
+    .about_pic2 {
+        width: 170px;
+        margin-top: 450px;
+    }
+
+    .about_title {
+
+        position: absolute;
+        top: 275px;
+        width: 362px;
+        left: 7%;
+    }
+
+    .about_body {
+        position: absolute;
+        top: 340px;
+        left: 7%;
+    }
+
+    /* 製品一覧 */
+    .swiper-wrapper {
+        margin-top: 51px;
+        margin-bottom: 54px;
+    }
+
+    /* お知らせ */
+    .news_table {
+        width: 415px;
+    }
+
+    /* FAQ */
+
+    .accordion-area {
+        width: 350px;
+
+    }
+
+    .title {
+        font-size: 14px;
+    }
+
+    .title br {
+        display: inline;
+    }
+
+    .box {
+        font-size: 13px;
+    }
+}
+
+/*スマホ */
+@media (max-width: 428px) {
+    .fvWrapper {
+        height: 667px;
+        background-size: 998px;
+    }
+
+    .pc_fv_text {
+        display: none;
+    }
+
+    .sp_fv_text {
+        display: inline-block;
+        font-weight: 700;
+        font-size: 24px;
+
+        color: #4E301B;
+        width: 229px;
+        margin-left: 33px;
+        margin-top: 423px;
+    }
+
+    .sp_span {
+        display: inline-block;
+        background-color: #ffffff;
+        margin-bottom: 6px;
+        height: 38px;
+        line-height: 38px;
+        padding-left: 7px;
+    }
+
+    /*  */
+    .logo_1 {
+
+        width: 96px;
+        margin: 0 auto;
+    }
+
+    .logo_1::after {
+        left: 50%;
+        top: -30px;
+        transform: translateX(-50%);
+        content: '';
+        display: inline-block;
+        width: 154px;
+        height: 154px;
+        background: #FDF9EC;
+        border-radius: 50%;
+        z-index: -100;
+        position: absolute;
+    }
+
+    .logo_2 {
+        width: 275px;
+    }
+
+    /* アバウト */
+    .about_inner {
+        padding-top: 160px;
+    }
+
+    .about_pic1 {
+        width: 350px;
+        margin: 0 auto;
+    }
+
+    .about_pic2 {
+        margin-top: 520px;
+    }
+
+    .about_title {
+        top: 350px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .about_body {
+        top: 394px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 300px;
+    }
+
+    /*  */
+    .news_table {
+        width: 360px;
+    }
+
+    .news_table tr {
+        display: grid;
+        height: 62px;
+        padding-top: 10px;
+    }
+
+    /* footer */
+
+
+    .footer_logoBox .logo_1 {
+        width: 48px;
+    }
+
+    .footer_logoBox .logo_2 {
+        width: 137px;
+    }
+
+    .footer_logoBox .logo_2_en {
+        width: 99px;
+    }
+
+
+
+
+}
+
+@media (max-width: 375px) {}
