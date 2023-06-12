@@ -345,13 +345,69 @@
         <!---- お問い合わせ ---->
         <div class="contactWrapper" id="contact">
             <h2>お問い合わせ</h2>
-            <p>ご購入・販売に関しましては、下記よりお気軽にお問い合わせください。</p>
+            <p><span>ご購入・販売に関しましては、</span>
+                <span>下記よりお気軽にお問い合わせください。</span>
+            </p>
+
+            <!-- 問い合わせフォーム -->
+            <div class="form-wrapper">
+                <p>お問い合わせメールフォーム</p>
+
+                <form
+                    action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSe_cfg8LvMz1mM4qBomoAXeNt5eup5uWjl7wtglX8-s6N3L5Q/formResponse"
+                    method="POST" id="form">
+                    <div class="box">
+                        <span class="label">お問合せ種類</span>
+                        <div class="radio_box">
+                            <input type="radio" name="entry.1141526868" value="弊社製品について" id="company" required>
+                            <label for="company" class="sample_label">弊社製品について</label>
+
+                            <input type="radio" name="entry.1141526868" value="いちご狩りについて" id="strawberries" required>
+                            <label for="strawberries" class="sample_label">いちご狩りについて</label>
+
+                            <input type="radio" name="entry.1141526868" value="その他のお問い合わせ" id="other" required>
+                            <label for="other" class="sample_label">その他のお問い合わせ</label>
+
+                        </div>
+                    </div>
+
+                    <div class="box">
+                        <label for="name">お名前</label>
+                        <input type="text" name="entry.1293713556" id="name" placeholder="お名前" required>
+                    </div>
+                    <div class="box">
+                        <label type="postalcode">郵便番号</label>
+                        <input type="text" name="entry.991294857" id="postalcode" placeholder="郵便番号" required>
+                    </div>
+                    <div class="box">
+                        <label type="adress">ご住所</label>
+                        <input type="text" name="entry.1157029949" id="adress" placeholder="ご住所" required>
+                    </div>
+                    <div class="box">
+                        <label for="mail">メールアドレス</label>
+                        <input type="mail" name="entry.1923532049" id="mail" placeholder="メールアドレス" required>
+                    </div>
+                    <div class="box">
+                        <label for="tell">電話番号</label>
+                        <input type="tell" name="entry.995249535" id="tell" placeholder="電話番号" required>
+                    </div>
+                    <div class="box">
+                        <label for="comment">お問合せ内容</label>
+                        <textarea name="entry.1735912867" id="comment" placeholder="自由記述"
+                            required></textarea><!-- /# -->
+                    </div>
+                    <input type="submit" class="submit-btn">
+                </form>
+
+                <p class="end-message">お問い合わせありがとうございました</p>
+                <p class="false-message">送信失敗です</p>
+            </div>
 
         </div>
 
-        </div>
 
-        </div>
+
+
 
 
     </main>
@@ -385,9 +441,19 @@
                     </li>
                 </ul>
             </nav>
+            <div class="strawverry_mid_pic">
+                <img src="images/strawberry-middle.png" alt="">
+            </div>
+            <div class="livestock_pic">
+                <img src="images/livestock-middle.png" alt="">
+            </div>
+            <div class="right">
+                ©︎ 2019 GOTONOUEN.
+            </div>
         </div>
 
     </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="js/script.js">

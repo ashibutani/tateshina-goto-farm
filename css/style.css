@@ -519,23 +519,166 @@ iframe {
 /* お問い合わせ */
 .contactWrapper {
     padding-top: 91px;
-
     background: #FDF9EF;
+    padding-bottom: 30px;
 }
 
 .contactWrapper p {
-
     font-size: clamp(12px, 1.25vw, 18px);
     /* identical to box height */
     text-align: center;
-
     color: #4E301B;
+    line-height: 20px;
+    margin-top: 67px;
+}
+
+.contactWrapper span {
+    display: inline-block;
+
+}
+
+/* フォーム */
+.form-wrapper {
+    width: 740px;
+    height: 849px;
+    background: #FFFFFF;
+    margin: 0 auto;
+    margin-top: 93px;
+    border-radius: 20px;
+
+}
+
+.form-wrapper p {
+    padding-top: 37px;
+}
+
+.end-message {
+    display: none;
+}
+
+.false-message {
+    display: none;
+}
+
+.box {
+
+    //overflow: hidden;
+    //margin-bottom: 20px;
+    display: flex;
+}
+
+
+label {
+    display: block;
+    width: 300px;
+    height: 30px;
+}
+
+.label {
+
+    width: 300px;
+    height: 30px;
+}
+
+
+input[type="text"],
+input[type="mail"],
+input[type="tell"],
+textarea {
+    border: solid 1px #aaa;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 15px;
+}
+
+input[type=radio] {
+    display: none;
+}
+
+
+
+/* ラジオボタン */
+.sample_label {
+    position: relative;
+    /* ボックスの位置を指定する */
+    padding: 0 0 0 42px;
+    /* ボックス内側の余白を指定する */
+}
+
+.sample_label:after,
+.sample_label:before {
+    position: absolute;
+    /* ボックスの位置を指定する */
+    content: "";
+    /* ボックスのコンテンツ */
+    display: block;
+    /* ブロックレベル要素化する */
+    top: 50%;
+    /* 上部から配置の基準位置を決める */
+}
+
+.sample_label:after {
+    left: 15px;
+    /* 左から配置の基準位置を決める */
+    margin-top: -10px;
+    /* チェック枠の位置 */
+    width: 16px;
+    /* ボックスの横幅を指定する */
+    height: 16px;
+    /* ボックスの高さを指定する */
+    border: 2px solid #4E301B;
+    ;
+    /* ボックスの境界線を実線で指定する */
+    border-radius: 50%;
+    /* ボックスの角丸を指定する */
+}
+
+.sample_label:before {
+    left: 15px;
+    /* 左から配置の基準位置を決める */
+    margin-top: -10px;
+    /* チェックマークの位置 */
+    width: 16px;
+    /* ボックスの横幅を指定する */
+    height: 16px;
+    /* ボックスの高さを指定する */
+    border: 6px solid #4E301B;
+    /* ボックスの背景色を指定する */
+    border-radius: 50%;
+    /* ボックスの角丸を指定する */
+    opacity: 0;
+    /* 要素を透過指定する */
+}
+
+input[type=radio]:checked+.sample_label:before {
+    opacity: 1;
+    /* 要素を表示する */
+}
+
+textarea {
+    //resize: both;
 }
 
 
 
 /* フッター */
-.footerWrapper {}
+.footerWrapper {
+    position: relative;
+}
+
+.strawverry_mid_pic {
+    position: absolute;
+    width: clamp(155px, 19.3vw, 297px);
+    left: 0;
+    bottom: 58px;
+}
+
+.livestock_pic {
+    position: absolute;
+    width: clamp(150px, 18.5vw, 237px);
+    right: 0;
+    bottom: 58px;
+}
 
 .footer_nav {
     display: flex;
@@ -549,6 +692,7 @@ iframe {
     display: flex;
     padding-top: 51px;
     margin: 0 auto;
+    padding-bottom: 97px;
 }
 
 .footer_nav li {
@@ -566,33 +710,22 @@ iframe {
 
 }
 
-/* 
-.logo_1 {
-    width: 96px;
-    margin: 0 auto;
+.footer_logoBox .logo_1::after {
+    background: #ffffff;
+
 }
 
+.right {
+    background: #D9D9D9;
+    font-weight: 400;
+    font-size: 12px;
+    text-align: center;
+    height: 60px;
 
-.logo_1::after {
-    left: 50%;
-    top: -30px;
-    transform: translateX(-50%);
-    content: '';
-    display: inline-block;
-    //width: clamp(80px, 12.03vw, 154px);
-    //height: clamp(80px, 12.03vw, 154px);
-    width: 154px;
-    height: 154px;
-    background: #FDF9EC;
-    border-radius: 50%;
-    z-index: -100;
-    position: absolute;
+    color: #4E301B;
+    display: grid;
+    align-items: center;
 }
-
-.logo_2 {
-
-    width: 275px;
-} */
 
 
 
@@ -739,6 +872,11 @@ iframe {
         width: 180px;
         bottom: -51px;
 
+    }
+
+    /* footer */
+    .footer_nav ul {
+        padding-bottom: 100px;
     }
 }
 
@@ -913,6 +1051,7 @@ iframe {
         display: block;
         padding-top: 10px;
         text-align: center;
+        padding-bottom: 25px;
 
     }
 
