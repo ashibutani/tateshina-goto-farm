@@ -229,7 +229,7 @@ h2 {
 
 .sp_nav ul {
     display: block;
-    margin-top: 32px;
+    margin-top: 50px;
 }
 
 .sp_nav li {
@@ -238,7 +238,7 @@ h2 {
     margin-bottom: 16px;
     line height: 23px;
     font-size: 16px;
-    font-weight: 700;
+
 }
 
 .hm_menu {
@@ -1415,4 +1415,16 @@ input[type=radio]:checked+.sample_label:before {
 
 }
 
-@media (max-width: 375px) {}
+@media (max-width: 375px) {
+    .loader {
+        width: 70px;
+        height: 70px;
+        background-size: 70px;
+    }
+
+    .loader_p {
+        width: 150px;
+        font-size: 14px;
+        margin-top: 10px;
+    }
+}
