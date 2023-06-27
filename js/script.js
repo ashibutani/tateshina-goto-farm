@@ -1,4 +1,7 @@
-
+window.onload = function () {
+    const loader_element = document.getElementById('loader_wrap');
+    loader_element.classList.add('loaded');
+};
 
 $(function () {
     $(".hm_menu").on("click", function () {
@@ -13,6 +16,13 @@ $(function () {
     $(window).resize(function () {/*画面サイズが変更された時*/
         $(".sp_nav").css("display", "none");/*sp-nav-areaを消す*/
         $(".hm_menu span").removeClass("active");/*クラスactiveをつけるとボタンがななめになるので、クラスactiveを消す*/
+    });
+});
+
+$(function () {
+    $(".sp_nav a").on("click", function () {
+        $(".sp_nav").css("display", "none");/*sp-nav-areaを消す*/
+        $(".hm_menu span").toggleClass("active");
     });
 });
 
@@ -63,14 +73,15 @@ $(document).ready(function () {
     $('#form').submit(function (event) {
         var formData = $('#form').serialize();
         $.ajax({
-            url: "https://docs.google.com/forms/hogehoge",
+            url: "https://docs.google.com/forms/u/0/d/e/1FAIpQLSe_cfg8LvMz1mM4qBomoAXeNt5eup5uWjl7wtglX8-s6N3L5Q/formResponse",
             data: formData,
             type: "POST",
             dataType: "xml",
             statusCode: {
                 0: function () {
                     $(".end-message").slideDown();
-                    $(".submit-btn").fadeOut();
+                    $("form").fadeOut();
+                    $(".form-wrapper").css("height", "200px");
                     //window.location.href = "thanks.html";
                 },
                 200: function () {

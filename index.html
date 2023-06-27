@@ -33,13 +33,19 @@
 </head>
 
 <body>
+    <div id="loader_wrap">
+        <div class="loader">
+        </div>
+        <div class="loader_p">読み込み中・・・</div>
+
+    </div>
     <header>
 
     </header>
     <main>
         <!---- FV ---->
 
-        <div class="fvWrapper">
+        <div class="fvWrapper" id="top">
             <button class="hm_menu" type="button">
                 <span></span>
                 <span></span>
@@ -81,18 +87,20 @@
                 </ul>
             </nav>
             <nav class="sp_nav">
-                <div class="sp_logo">
-                    <div class="splogo_1">
-                        <img src="images/logo-01.svg" alt="">
-                    </div>
-                    <div class="splogo_2">
-                        <img src="images/logo-letter.svg" alt="">
+                <a href="#top">
+                    <div class="sp_logo">
+                        <div class="splogo_1">
+                            <img src="images/logo-01.svg" alt="">
+                        </div>
+                        <div class="splogo_2">
+                            <img src="images/logo-letter.svg" alt="">
 
+                        </div>
+                        <div class="splogo_2_en">
+                            <img src="images/logo-letter-en.svg" alt="">
+                        </div>
                     </div>
-                    <div class="splogo_2_en">
-                        <img src="images/logo-letter-en.svg" alt="">
-                    </div>
-                </div>
+                </a>
                 <ul>
                     <li><a href="#about">この農園について</a>
                     </li>
@@ -109,15 +117,17 @@
                 </ul>
             </nav>
             <div class="logoBox">
-                <div class="logo_1">
-                    <img src="images/logo-01.svg" alt="">
-                </div>
-                <div class="logo_2">
-                    <img src="images/logo-letter.svg" alt="">
-                </div>
-                <div class="logo_2_en">
-                    <img src="images/logo-letter-en.svg" alt="">
-                </div>
+                <a href="#top">
+                    <div class="logo_1">
+                        <img src="images/logo-01.svg" alt="">
+                    </div>
+                    <div class="logo_2">
+                        <img src="images/logo-letter.svg" alt="">
+                    </div>
+                    <div class="logo_2_en">
+                        <img src="images/logo-letter-en.svg" alt="">
+                    </div>
+                </a>
             </div>
         </div>
         <!---- about ---->
@@ -356,8 +366,8 @@
                 <form
                     action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSe_cfg8LvMz1mM4qBomoAXeNt5eup5uWjl7wtglX8-s6N3L5Q/formResponse"
                     method="POST" id="form">
-                    <div class="box">
-                        <span class="label">お問合せ種類</span>
+                    <div class="form_box">
+                        <span class="label">お問合せ種類<span class="need">必須</span></span>
                         <div class="radio_box">
                             <input type="radio" name="entry.1141526868" value="弊社製品について" id="company" required>
                             <label for="company" class="sample_label">弊社製品について</label>
@@ -371,35 +381,34 @@
                         </div>
                     </div>
 
-                    <div class="box">
-                        <label for="name">お名前</label>
-                        <input type="text" name="entry.1293713556" id="name" placeholder="お名前" required>
+                    <div class="form_box">
+                        <label for="name">お名前 <span class="need">必須</span></label>
+                        <input type="text" name="entry.1293713556" id="name" required>
                     </div>
-                    <div class="box">
-                        <label type="postalcode">郵便番号</label>
-                        <input type="text" name="entry.991294857" id="postalcode" placeholder="郵便番号" required>
+                    <div class="form_box">
+                        <label for="postalcode">郵便番号</label>
+                        <input type="text" name="entry.991294857" id="postalcode" required>
                     </div>
-                    <div class="box">
-                        <label type="adress">ご住所</label>
-                        <input type="text" name="entry.1157029949" id="adress" placeholder="ご住所" required>
+                    <div class="form_box">
+                        <label for="adress">ご住所<span class="need">必須</span></label>
+                        <input type="text" name="entry.1157029949" id="adress" required>
                     </div>
-                    <div class="box">
-                        <label for="mail">メールアドレス</label>
-                        <input type="mail" name="entry.1923532049" id="mail" placeholder="メールアドレス" required>
+                    <div class="form_box">
+                        <label for="mail">メールアドレス<span class="need">必須</span></label>
+                        <input type="mail" name="entry.1923532049" id="mail" required>
                     </div>
-                    <div class="box">
-                        <label for="tell">電話番号</label>
-                        <input type="tell" name="entry.995249535" id="tell" placeholder="電話番号" required>
+                    <div class="form_box">
+                        <label for="tell">電話番号<span class="need">必須</span></label>
+                        <input type="tell" name="entry.995249535" id="tell" required>
                     </div>
-                    <div class="box">
-                        <label for="comment">お問合せ内容</label>
-                        <textarea name="entry.1735912867" id="comment" placeholder="自由記述"
-                            required></textarea><!-- /# -->
+                    <div class="form_box">
+                        <label for="comment">お問合せ内容<span class="need">必須</span></label>
+                        <textarea name="entry.1735912867" id="comment" required></textarea><!-- /# -->
                     </div>
                     <input type="submit" class="submit-btn">
                 </form>
 
-                <p class="end-message">お問い合わせありがとうございました</p>
+                <p class="end-message">送信完了しました。ありがとうございました。</p>
                 <p class="false-message">送信失敗です</p>
             </div>
 
@@ -414,15 +423,18 @@
     <footer>
         <div class="footerWrapper">
             <div class="footer_logoBox">
-                <div class="logo_1">
-                    <img src="images/logo-01.svg" alt="">
-                </div>
-                <div class="logo_2">
-                    <img src="images/logo-letter.svg" alt="">
-                </div>
-                <div class="logo_2_en">
-                    <img src="images/logo-letter-en.svg" alt="">
-                </div>
+                <a href="#top">
+                    <div class="logo_1">
+                        <img src="images/logo-01.svg" alt="">
+                    </div>
+                    <div class="logo_2">
+                        <img src="images/logo-letter.svg" alt="">
+                    </div>
+                    <div class="logo_2_en">
+                        <img src="images/logo-letter-en.svg" alt="">
+                    </div>
+                </a>
+
             </div>
             <nav class="footer_nav">
                 <ul>
