@@ -39,7 +39,7 @@ h2 {
     top: 0;
     background: #fff;
     z-index: 1000;
-    margin-top: 40vh;
+
 }
 
 /* ローディングアニメーションの設定 */
@@ -52,6 +52,7 @@ h2 {
     animation: blink 1.5s infinite linear;
     z-index: 1000;
     margin: 0 auto;
+    margin-top: 40vh;
 
 }
 
@@ -95,13 +96,54 @@ h2 {
     overflow: hidden;
 }
 
+
+/* safariずれ */
+_::-webkit-full-page-media,
+_:future,
+:root .pc_fv_text {
+
+    position: absolute;
+    top: 17%;
+    right: 30%;
+    height: clamp(200px, 43vw, 432px);
+    overflow: initial;
+}
+
+_::-webkit-full-page-media,
+_:future,
+:root .pc_span {
+    width: 4.8vw;
+}
+
+
+/* @media screen and (-webkit-min-device-pixel-ratio:0) {
+
+    ::i-block-chrome,
+    .pc_fv_text {
+        position: absolute;
+        top: 17%;
+        right: 30%;
+        height: clamp(200px, 38.8vw, 432px);
+        overflow: initial;
+    }
+
+    ::i-block-chrome,
+    .pc_span {
+        width: 4.8vw;
+
+    }
+} */
+
+
+/*  */
 .sp_fv_text {
     display: none;
 }
 
 .pc_fv_text h1 {
-    -ms-writing-mode: tb-rl;
     writing-mode: vertical-rl;
+    -ms-writing-mode: tb-rl;
+    -webkit-writing-mode: vertical-rl;
     font-size: clamp(17px, 2.5vw, 32px);
     line-height: 150%;
     color: #4E301B;
@@ -286,11 +328,19 @@ h2 {
     background: rgba(255, 255, 255, 0.9);
 }
 
+/* safariずれ */
+_::-webkit-full-page-media,
+_:future,
+:root .about_title {
+    width: 71.8vw;
+}
+
 .about_body {
     position: absolute;
     left: 10.5%;
     top: 19vw;
     width: 41.1vw;
+    max-width: 530px;
     height: fit-content;
     background: rgba(255, 255, 255, 0.9);
     font-weight: 700;
@@ -298,6 +348,13 @@ h2 {
     line-height: 250%;
     color: #857868;
     padding: 15px;
+}
+
+/* safariずれ */
+_::-webkit-full-page-media,
+_:future,
+:root .about_body {
+    width: 51.1vw;
 }
 
 .span1 {
@@ -329,7 +386,14 @@ h2 {
     height: 25.8vw;
     min-height: 228px;
     background: #ffffff;
-    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+    box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
+}
+
+/* safariずれ */
+_::-webkit-full-page-media,
+_:future,
+:root .swiper-slide {
+    height: 28.8vw;
 }
 
 .item_pic {
@@ -915,6 +979,13 @@ input[type=radio]:checked+.sample_label:before {
         padding-top: 6px;
     }
 
+    /* safariずれ */
+    _::-webkit-full-page-media,
+    _:future,
+    :root .pc_fv_text {
+        height: 210px;
+    }
+
     .pc_nav {
         justify-content: center;
     }
@@ -930,18 +1001,25 @@ input[type=radio]:checked+.sample_label:before {
 
     /* アバウト */
 
-
-    .about_title {
-        /* position: absolute;
-        top: 90px; */
-
-    }
-
     .about_body {
         /* position: absolute;
         top: 180px; */
         width: 350px;
 
+    }
+
+    /* safariずれ */
+    _::-webkit-full-page-media,
+    _:future,
+    :root .about_body {
+        width: 350px;
+    }
+
+    /* safariずれ */
+    _::-webkit-full-page-media,
+    _:future,
+    :root .about_title {
+        width: 400px;
     }
 
     /* お知らせ */
@@ -984,6 +1062,15 @@ input[type=radio]:checked+.sample_label:before {
     .pc_fv_text {
         position: absolute;
         right: 16%;
+    }
+
+    /* safariずれ */
+    _::-webkit-full-page-media,
+    _:future,
+    :root .pc_fv_text {
+        height: 210px;
+        right: 35%;
+        top: 25%;
     }
 
     .pc_span {
@@ -1095,9 +1182,23 @@ input[type=radio]:checked+.sample_label:before {
         top: 275px;
     }
 
+    /* safariずれ */
+    _::-webkit-full-page-media,
+    _:future,
+    :root .about_title {
+        width: 280px;
+    }
+
     .about_body {
         position: absolute;
         top: 340px;
+    }
+
+    /* safariずれ */
+    _::-webkit-full-page-media,
+    _:future,
+    :root .about_body {
+        width: 340px;
     }
 
     /* お知らせ */
@@ -1162,7 +1263,7 @@ input[type=radio]:checked+.sample_label:before {
     }
 }
 
-@media (max-width: 630px) {
+@media screen and (max-width: 630px) {
     .pc_fv_text {
         height: 200px;
     }
@@ -1383,6 +1484,20 @@ input[type=radio]:checked+.sample_label:before {
         top: 394px;
         left: 50%;
         transform: translateX(-50%);
+        width: 300px;
+    }
+
+    /* safariずれ */
+    _::-webkit-full-page-media,
+    _:future,
+    :root .about_body {
+        width: 300px;
+    }
+
+    _::-webkit-full-page-media,
+    _:future,
+    :root .about_title {
+        font-size: 16px;
         width: 300px;
     }
 
