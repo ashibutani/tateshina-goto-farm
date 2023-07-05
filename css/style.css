@@ -101,39 +101,19 @@ h2 {
 _::-webkit-full-page-media,
 _:future,
 :root .pc_fv_text {
-
     position: absolute;
     top: 17%;
     right: 30%;
-    height: clamp(200px, 43vw, 432px);
+    height: 432px;
     overflow: initial;
 }
 
 _::-webkit-full-page-media,
 _:future,
 :root .pc_span {
-    width: 4.8vw;
+    width: 62px;
+    font-size: 32px;
 }
-
-
-/* @media screen and (-webkit-min-device-pixel-ratio:0) {
-
-    ::i-block-chrome,
-    .pc_fv_text {
-        position: absolute;
-        top: 17%;
-        right: 30%;
-        height: clamp(200px, 38.8vw, 432px);
-        overflow: initial;
-    }
-
-    ::i-block-chrome,
-    .pc_span {
-        width: 4.8vw;
-
-    }
-} */
-
 
 /*  */
 .sp_fv_text {
@@ -154,6 +134,7 @@ _:future,
 .pc_span {
     background-color: #ffffff;
     width: 4.84vw;
+    max-width: 62px;
     margin-left: 21px;
     display: inline-flex;
     align-items: center;
@@ -315,15 +296,18 @@ _:future,
 }
 
 .about_title {
+    display: grid;
     width: 57.8vw;
+    max-width: 740px;
     height: 5.94vw;
+    max-height: 96px;
     position: absolute;
     left: 10.5%;
     top: 11vw;
     font-weight: 700;
     font-size: clamp(19px, 3.13vw, 40px);
-    line-height: 5.94vw;
     text-align: center;
+    align-items: center;
     color: #35A1C4;
     background: rgba(255, 255, 255, 0.9);
 }
@@ -332,7 +316,10 @@ _:future,
 _::-webkit-full-page-media,
 _:future,
 :root .about_title {
-    width: 71.8vw;
+    //width: 71.8lvw;
+    width: 760px;
+    font-size: 40px;
+    height: 76px;
 }
 
 .about_body {
@@ -880,7 +867,17 @@ input[type=radio]:checked+.sample_label:before {
 
 /******メディアクエリ******************/
 /************************************************/
-@media (max-width: 1850px) {}
+@media (max-width: 1850px) {
+
+    /* safariずれ */
+    _::-webkit-full-page-media,
+    _:future,
+    :root .about_title {
+        width: 700px;
+        font-size: 37px;
+        height: 70px;
+    }
+}
 
 @media (max-width: 1014px) {
     .pc_nav {
@@ -935,8 +932,34 @@ input[type=radio]:checked+.sample_label:before {
         padding-top: 6px;
     }
 
-    /* アバウト */
+    /* safariずれ */
+    _::-webkit-full-page-media,
+    _:future,
+    :root .pc_fv_text {
+        position: absolute;
+        top: 17%;
+        right: 37%;
+        height: 393px;
+        overflow: initial;
+    }
 
+    _::-webkit-full-page-media,
+    _:future,
+    :root .pc_span {
+        width: 56px;
+        font-size: 28px;
+    }
+
+
+    /* アバウト */
+    /* safariずれ */
+    _::-webkit-full-page-media,
+    _:future,
+    :root .about_title {
+        width: 620px;
+        font-size: 32px;
+        height: 60px;
+    }
 
     .span2 {
         display: inline;
@@ -979,13 +1002,6 @@ input[type=radio]:checked+.sample_label:before {
         padding-top: 6px;
     }
 
-    /* safariずれ */
-    _::-webkit-full-page-media,
-    _:future,
-    :root .pc_fv_text {
-        height: 210px;
-    }
-
     .pc_nav {
         justify-content: center;
     }
@@ -997,6 +1013,20 @@ input[type=radio]:checked+.sample_label:before {
     .nav_right {
         padding-top: 125px;
 
+    }
+
+    /* safariずれ */
+    _::-webkit-full-page-media,
+    _:future,
+    :root .pc_fv_text {
+        height: 318px;
+    }
+
+    _::-webkit-full-page-media,
+    _:future,
+    :root .pc_span {
+        width: 46px;
+        font-size: 24px;
     }
 
     /* アバウト */
@@ -1011,16 +1041,13 @@ input[type=radio]:checked+.sample_label:before {
     /* safariずれ */
     _::-webkit-full-page-media,
     _:future,
-    :root .about_body {
-        width: 350px;
+    :root .about_title {
+        width: 430px;
+        font-size: 23px;
+        height: 50px;
     }
 
-    /* safariずれ */
-    _::-webkit-full-page-media,
-    _:future,
-    :root .about_title {
-        width: 400px;
-    }
+
 
     /* お知らせ */
     .news_table {
@@ -1062,15 +1089,6 @@ input[type=radio]:checked+.sample_label:before {
     .pc_fv_text {
         position: absolute;
         right: 16%;
-    }
-
-    /* safariずれ */
-    _::-webkit-full-page-media,
-    _:future,
-    :root .pc_fv_text {
-        height: 210px;
-        right: 35%;
-        top: 25%;
     }
 
     .pc_span {
@@ -1186,7 +1204,9 @@ input[type=radio]:checked+.sample_label:before {
     _::-webkit-full-page-media,
     _:future,
     :root .about_title {
-        width: 280px;
+        width: 350px;
+        font-size: 19px;
+        height: 45px;
     }
 
     .about_body {
@@ -1269,6 +1289,21 @@ input[type=radio]:checked+.sample_label:before {
     }
 
     .pc_fv_text h1 {
+        font-size: 17px;
+    }
+
+    /* safariずれ */
+    _::-webkit-full-page-media,
+    _:future,
+    :root .pc_fv_text {
+        height: 230px;
+        top: 24%;
+    }
+
+    _::-webkit-full-page-media,
+    _:future,
+    :root .pc_span {
+        width: 32px;
         font-size: 17px;
     }
 
@@ -1492,6 +1527,7 @@ input[type=radio]:checked+.sample_label:before {
     _:future,
     :root .about_body {
         width: 300px;
+
     }
 
     _::-webkit-full-page-media,
@@ -1499,6 +1535,7 @@ input[type=radio]:checked+.sample_label:before {
     :root .about_title {
         font-size: 16px;
         width: 300px;
+        top: 330px;
     }
 
     /*  */
